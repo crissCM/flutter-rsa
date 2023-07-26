@@ -35,7 +35,7 @@ android {
 
 task nativeLibsToJar(type: Jar, description: 'create a jar archive of the native libs') {
     destinationDirectory.set(file("$buildDir/native-libs"))
-    archiveBaseName 'native-libs'
+    archiveBaseName = 'native-libs'
     from fileTree(dir: 'libs', include: '**/*.so')
     into 'lib/'
 }
